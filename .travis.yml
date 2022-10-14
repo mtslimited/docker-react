@@ -2,8 +2,10 @@ sudo: required
 services:
   - docker
 
+# build test image
 before_install:
   - docker build -t mtslimited/docker-react -f dockerfile.dev
 
+#test scripts
 script:
   - docker run mtslimited/docker-react npm run test -- --coverage
