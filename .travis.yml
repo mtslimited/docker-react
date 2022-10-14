@@ -4,7 +4,7 @@ services:
 
 # build test image
 before_install:
-  - docker build -f dockerfile.dev -t mtslimited/docker-react .
+  - docker build -f Dockerfile.dev -t mtslimited/docker-react .
 
 #test scripts
 script:
