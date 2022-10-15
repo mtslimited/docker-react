@@ -11,7 +11,7 @@ before_install:
 script:
   - docker run mtslimited/docker-react npm run test -- --coverage
 
-  deploy:
+deploy:
   provider: elasticbeanstalk
   region: "eu-west-2"
   app: "docker-react"
