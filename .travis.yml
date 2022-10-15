@@ -9,7 +9,7 @@ before_install:
 
 #test scripts
 script:
-  - docker run mtslimited/docker-react npm run test -- --coverage
+  - docker run -e CI=true mtslimited/docker-react npm run test
 
 deploy:
   provider: elasticbeanstalk
@@ -23,4 +23,3 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key:
     secure: "AWS_SECRET_KEY"
-    
